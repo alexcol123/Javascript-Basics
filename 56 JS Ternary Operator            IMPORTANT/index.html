@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+		<title>Javascript</title>
+	</head>
+
+	<body>
+		<h3>Js DOM </h3>
+
+		<div id="output">Ternary Operator  </div>
+
+		<script>
+			
+			var userNames =  ["Mike", "Ethan", "James", "Malik", "Kevin"];
+			
+			var userInput = prompt("What is thy Name?");
+			
+			var checkUser = userNames.indexOf(userInput) >-1? true : false;
+			
+			var output = document.getElementById("output");
+			output.innerHTML = checkUser? "Welcome ": "Denied ";
+			output.innerHTML +=","+userInput;
+			
+		
+			
+
+			
+			
+			
+		</script>
+
+	</body>
+
+</html>
+
