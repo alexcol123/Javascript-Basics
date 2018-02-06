@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+
+
+</head>
+
+
+
+<body>
+    <h1>Javascript</h1>
+
+
+    <div id="output">Car Info</div>
+
+    <script>
+        var cars = {
+            1: {
+                color: "Red",
+                make: "Ford",
+                model: "Explorer",
+                doors: 4,
+                engine: 5.7
+            },
+            2: {
+                color: "Black",
+                make: "Nissan",
+                model: "Altima",
+                doors: 4,
+                engine: 3.2
+            },
+            3: {
+                color: "Yellow",
+                make: "Ford",
+                model: "Mustang",
+                doors: 2,
+                engine: 4.7
+            },
+            4: {
+                color: "Gold",
+                make: "Hyunday",
+                model: "Elantra",
+                doors: 4,
+                engine: 2.7
+            }
+        };
+        
+        var output = document.getElementById("output");
+        var prop1 = prompt("Choose Car # (from 1-4)");
+        var prop2 = prompt("Choose Feature  , example  color, make, model, doors, engine");
+        
+        output.innerHTML =  "The car you selected  is a : " +cars[prop1].make+ " "  +cars[prop1].model+ " <br> and the feture you selected is the: "  +prop2+ "  which is:"  +cars[prop1][prop2];
+     
+        
+        console.log(prop1);
+        console.log(prop2);
+        
+    </script>
+
+
+
+
+    <!--	<script src="myscript.js"></script> -->
+
+</body>
+
+</html>
