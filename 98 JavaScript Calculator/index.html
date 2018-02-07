@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>JS Game</title>
+
+		<style>
+			body{
+				background: goldenrod;
+				color: white;
+				text-align: center;
+
+			}
+			
+			.container{
+				background: red;
+				padding: 60px;
+				width: 600px;
+				margin: 50px auto;
+				border: solid 5px #fff;
+				box-shadow:  5px 5px 20px #000
+			}
+
+			input[type="button"]{
+
+				margin: 40px 10px 5px 10px; 
+				padding: 8px;
+				font-size: 18px;
+				text-align: center;
+				cursor: pointer;
+				outline: none;
+				color: #fff;
+				background-color: #4CAF50;
+				border: none;
+				border-radius: 15px;
+				box-shadow: 0 9px #999;
+
+			}
+			input:hover[type="button"]{
+				background-color: #3e8e41;
+
+			}
+			input:active[type="button"]{
+				background-color: #3e8e41;
+				box-shadow: 0 5px #666;
+				transform: translateY(4px);
+
+			}
+			#output{
+				margin: 30px;
+				font-weight: Bold;
+				font-size: 25px;
+				margin: 20px auto;
+
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="container">
+			First: <input type="text" id="num1">
+			Second: <input type="text" id="num2">
+			<br>
+			<input type="button" onClick="addBy()" value="Addition">
+
+			<input type="button" onClick="subBy()" value="Substract">
+
+			<input type="button" onClick="mulBy()" value="Multiplication">
+
+			<input type="button" onClick="divBy()" value="Division">
+
+			<br> <div id="output"></div>
+
+		</div>
+		
+		<script>
+			var output = document.getElementById("output");
+			var num1 = document.getElementById("num1");
+			var num2 = document.getElementById("num2");
+
+			function addBy(){
+				var a =  "Addition : " + num1.value + " + " + num2.value;
+				var b = Number(num1.value) + Number(num2.value)
+				outHTML(a,b);
+			}
+			
+				function subBy(){
+				var a = "Substraction : " + num1.value + " - " + num2.value;
+				var b = Number(num1.value) - Number(num2.value)
+				outHTML(a,b);
+			}
+			
+				function mulBy(){
+				var a = "Multiplication : " + num1.value + " x " + num2.value;
+				var b = Number(num1.value) * Number(num2.value)
+				outHTML(a,b);
+			}
+			
+				function divBy(){
+				var a = "Division : " +num1.value + " / " + num2.value;
+				var b = Number(num1.value) / Number(num2.value)
+				outHTML(a,b);
+			}
+
+			function outHTML(a, b){
+				output.innerHTML += a + " = "  + b + "<br>";
+			}
+
+		</script>
+
+
+	</body>
+
+
+</html>
