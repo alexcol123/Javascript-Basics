@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>JS Game</title>
+		<style>
+            #output{
+                font-weight: bold;
+                color: red;
+                font-size: 20px;
+            }
+        </style>
+	</head>
+
+	<body>
+		<h3>Loops</h3>
+
+	
+		<br>
+		
+		<div id="output"></div>
+
+
+		<script>
+
+			var output = document.getElementById("output");
+			var secret = "Alex"
+            
+            var crackCode = prompt(" Enter the Secret Word (Hint Correct Word = Alex)");
+            
+            while (crackCode != secret){
+                crackCode = prompt("Wrong, Try Again");
+            };
+            
+            output.innerHTML = "You Are Correct, The secret word is : " + secret; 
+
+		
+
+		</script>
+
+
+	</body>
+
+
+</html>

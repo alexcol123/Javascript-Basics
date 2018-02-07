@@ -1,0 +1,51 @@
+<html>
+	<head>
+    <title>JS Game</title>
+</head>
+
+<body>
+    <h3>Loops</h3>
+    <h3>Sample 1</h3>
+    <div id="output"></div>
+    <br>
+    <h3>Sample 2</h3>
+    <p>To Get the Even Numbers up to 30</p>
+    <div id="output1">loops2 </div>
+
+
+
+
+    <script>
+        var output = document.getElementById("output");
+        var answer = prompt("How many tymes do you want me to loop");
+        if (typeof Number)
+            var x = 0;
+        do {
+            x++;
+            output.innerHTML += "Value of X = " + x + "<br>";
+        }
+        while (x < Number(answer));
+        output.innerHTML += "The Final value of X is =" + x + "<br>";
+
+        // Sample 2 
+
+        var output = document.getElementById("output1");
+        var y = 0;
+        do{
+            if(y % 2 == 0){
+                output1.innerHTML += "Value of Y = " +y+ "<br>";
+            } 
+            y++;
+        }
+        while (y < 30);
+        output1.innerHTML += "Final value of Y =" +y ;
+
+
+
+    </script>
+
+
+</body>
+
+
+</html>

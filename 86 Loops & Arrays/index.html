@@ -1,0 +1,79 @@
+<html>
+	<head>
+    <title>JS Game</title>
+
+    <style>
+        body {
+            background: black;
+            color: green;
+            padding: 15px;
+        }
+
+        h2,
+        h3 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Nested Loops Table</h2>
+
+    <div id="output"></div>
+
+
+    <script>
+        var output =
+
+            document.getElementById("output");
+        var userNames = ["Scopion", "Johnny Cage", "Kung Lao", " Kitana"];
+
+        // Using For loop 
+        output.innerHTML += "<h3>Using for loop</h3>";
+        for (var x = 0; x < userNames.length; x++) {
+            output.innerHTML += userNames[x] + "<br>";
+        }
+
+        // Using For Loop  to reverse the Order
+        output.innerHTML += "<h3>Using for loop to reverse order </h3>";
+        for (x = userNames.length - 1; x >= 0; x--) {
+            output.innerHTML += userNames[x] + "<br>";
+        }
+
+        // Using ES6
+        output.innerHTML += "<h3>Using ES6 </h3>";
+        for (user of userNames) {
+            output.innerHTML += user + "<br>";
+        }
+
+        //Using The While Loop
+        output.innerHTML += "<h3>Using The While Loop  </h3>";
+        var x = 0;
+        while (userNames[x]) {
+            output.innerHTML += userNames[x] + "<br>";
+            x++;
+        }
+
+        /*	
+			
+
+
+
+
+			output.innerHTML += "<br>Using for while loop   <br>  <br>";
+
+			// Using for while loop 
+
+			var x = 0;
+			while (userNames[x]) {
+				output.innerHTML += userNames[x] + "<br>";
+				x++;
+			}
+*/
+    </script>
+
+
+</body>
+
+
+</html>
