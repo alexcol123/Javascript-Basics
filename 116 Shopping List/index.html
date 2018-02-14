@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        body {
+            background: red;
+            padding: 30px;
+        }
+
+        input {
+            padding: 6px;
+            margin-bottom: 5px;
+        }
+
+        .container {
+            background: #000;
+            padding: 35px;
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            border: solid 2px white;
+            box-shadow: 15px 15px 55px #000;
+            border-radius: 25px;
+        }
+
+        h2 {
+            color: #fff;
+            text-transform: uppercase;
+
+        }
+
+        #output {
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: left;
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h2>Add Items </h2>
+        <input type="text" id="item">
+        <br>
+        <input type="button" onClick="addItem()" value="Add Item">
+        <br>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        var shoppingList = [];
+
+        function addItem() {
+            var addItem = document.getElementById("item").value;
+            shoppingList.push(addItem);
+
+            console.log(shoppingList)
+
+            function outputList() {
+                var html = "";
+                var output = document.getElementById("output");
+                for (var x = 0; x < shoppingList.length; x++) {
+                    html += (x + 1) + " " + shoppingList[x] + "<br>";
+                }
+                output.innerHTML = html;
+            }
+            outputList();
+        }
+
+    </script>
+</body>
+
+</html>
