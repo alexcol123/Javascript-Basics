@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        body {
+            background: linear-gradient(black, #262626, #404040, brown, orangered, red, orange, yellow);
+            padding: 20px;
+        }
+
+        #content {
+            margin: 0 auto;
+            width: 400px;
+
+            background:
+        }
+
+        .acc {
+            width: 270px;
+            font-size: 1.3rem;
+            background-color: #ddd;
+            margin: 3px;;
+            padding: 7px 15px;
+            color: black;
+            font-weight: bold;
+                border: double 3px black;
+
+        }
+          .acc:hover {
+            width: 270px;
+            font-size: 1.5rem;
+            background-color: yellow;
+            margin: 3px;
+            padding: 7px 15px;
+            color: red;
+            font-weight: bold;
+            border: double 5px black;
+
+        }
+
+        .con {
+            border: 2px solid black;
+            padding: 14px;
+            margin-left: 40px;
+            font-size: 1rem;
+            display: none;
+            background: rgba(0, 0, 0, 0.1);
+            width: 320px;
+            color: white;
+            box-shadow: 5px 8px 40px #000;
+            margin: 10px 0px 20px 30px;
+
+        }
+
+
+
+        .active {
+            display: block;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> Javascript Accordion </h2>
+
+    <div id="content">
+
+        <div class="acc">Content 1 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content1 <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+
+        <div class="acc">Content 2 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content2 <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+
+
+        <div class="acc">Content 3 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content3 <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+
+
+        <div class="acc">Content 4 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content4 <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+
+
+        <div class="acc">Content 5 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content5 <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+        
+        
+               <div class="acc">Content 6 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content6 <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+
+            
+               <div class="acc">Content 7 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content7<br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+              
+               <div class="acc">Content 8 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content8<br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+              
+               <div class="acc">Content 9 <small>(Click to Enlarge)</small></div>
+        <div class="con">This is the result for Content9<br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit distinctio provident sint, repudiandae reiciendis ratione ea, dolorum earum? Quidem deleniti cum dolores explicabo, a blanditiis dolore facere. Iusto, aliquid ut. </div>
+
+    </div>
+
+    <script>
+        var aTitle = document.querySelectorAll('.acc');
+        var c = document.querySelectorAll('.con');
+        for (var x = 0; x < aTitle.length; x++) {
+            aTitle[x].onclick = function() {
+                cCon(this.nextElementSibling);
+                this.nextElementSibling.classList.toggle('active');
+            }
+        }
+
+        function cCon(t) {
+            for (var x = 0; x < c.length; x++) {
+                if (t != c[x]) {
+                    c[x].classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
