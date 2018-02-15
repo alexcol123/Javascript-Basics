@@ -1,0 +1,80 @@
+<!--var message = document.getElementById('message');
+message.style.display = "none"
+message.style.display = "block"
+message.style.color = "red"
+message.style.borderBottomColor = "blue"
+message.style.border = "1px solid"
+message.style.backgroundColor = "yellow"-->
+
+<html>
+
+<head>
+    <style>
+        body {
+            padding: 25px;
+            background: goldenrod;
+            font-size: 20px;
+        }
+
+        .output,
+        .output2 {
+            height: 32px;
+            width: 200px;
+            text-align: center;
+            padding-top: 10px;
+            border: solid 2px black;
+            margin: 3px;
+            font-weight: bold;
+        }
+
+        .output2 {
+            margin-left: 85px
+        }
+    </style>
+</head>
+
+<body onload="start()">
+
+    <div class="output">Test Me 1</div>
+    <div class="output2">Test Me 2</div>
+    <div class="output">Test Me 3</div>
+    <div class="output2">Test Me 4</div>
+    <div class="output">Test Me 5</div>
+    <div class="output2">Test Me 6</div>
+    <div class="output">Test Me 7</div>
+    <div class="output2">Test Me 8</div>
+    <div class="output">Test Me 10</div>
+
+    <script>
+        var bgColor = ["red", "white", "blue", "green", "yellow", "pink", "Orangered", "beige", "gray", "brown", "purple"];
+
+        var message = document.getElementById("message");
+        var c;
+        var el = document.querySelectorAll('.output');
+        var el2 = document.querySelectorAll('.output2');
+
+        function start() {
+            setInterval(swapBg, 2000);
+            setInterval(swapBg2, 3000);
+        }
+
+        function swapBg() {
+            for (var x = 0; x < el.length; x++) {
+                c = bgColor[Math.floor(Math.random() * bgColor.length)];
+                el[x].style.backgroundColor = c;
+            }
+        }
+
+        function swapBg2() {
+            for (var x = 0; x < el2.length; x++) {
+                c = bgColor[Math.floor(Math.random() * bgColor.length)];
+                el2[x].style.backgroundColor = c;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <title>Complete JavaScript Course</title>
+</head>
+<style>
+    body {
+        background: #000;
+        font-size: 1.3rem;
+        margin: 55px auto;
+
+    }
+
+    #app {
+        background: white;
+        border: groove 25px red;
+        width: 800px;
+        margin: 0 auto;
+        box-shadow: 40px 25px  80px #606060 ;
+
+    }
+     #boxes{
+        margin: auto;
+    }
+
+    .box1 {
+        background-color: aqua;
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .box2 {
+        background-color: red;
+        font-size: 0.5rem;
+        color: #ddd;
+    }
+
+    #one,
+    #two,
+    #three {
+        box-sizing: border-box;
+        width: 140px;
+        height: 140px;
+        display: inline-block;
+        border: solid 7px #000;
+        text-align: center;
+        padding-top: 50px;
+        margin: 55px;
+        font-weight: bold;
+    }
+
+    .active {
+        background: yellow;
+    }
+
+    h2 {
+        text-transform: capitalize;
+        text-align: center;
+    }
+   
+</style>
+
+<body>
+
+    <div id="app">
+        <h2>Click Boxes to Change the Color</h2>
+        <div id="boxes">
+            <div id="one" class="myClass">Box 1</div>
+            <div id="two" class="myClass active">Box 2</div>
+            <div id="three" class="myClass">Box 3</div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var el = document.querySelectorAll('.myClass');
+
+        for (var x = 0; x < el.length; x++) {
+            el[x].onclick = function() {
+                upClass(el, 'active', 'remove')
+                if (!this.classList.contains('active')) {
+                    this.classList.add('active');
+                }
+            }
+        }
+
+        // Where e is the element // c is the class to be use  // a is the action to take  example add or remove
+        function upClass(e, c, a) {
+            for (var x = 0; x < e.length; x++) {
+                el[x].classList[a](c);
+            }
+
+        }
+
+
+
+
+        // You can run your function in  the console by tiping for example
+        // upClass(el,'box1', 'add') or    upClass(el,'box2', 'add') or   upClass(el,'box2', 'remove')  or upClass(el,'box1', 'remove')
+    </script>
+
+</body>
+
+</html>
