@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <title>setTimeout 2</title>
+    <meta name="description" content="setTimeout 2. Version 1.0" />
+    <meta name="author" content="The Gamer's Guide to Coding" />
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+
+</head>
+
+<body>
+
+    <h2 id="textChange">This Text Will Change in 5 seconds</h2>
+
+    <p>Open the browser console window to see the result.</p>
+
+
+
+    <script>
+        console.log("Waiting 5 seconds for the timer to trigger...");
+        var myTimer = setTimeout(timerAction, 5000);
+
+        function timerAction() {
+            textChange = document.getElementById('textChange');
+            console.log("Timer has triggered.");
+            console.log("This is in a function named timerAction .");
+            textChange.innerHTML=  " New Text..............";
+        }
+
+    </script>
+
+    <!--  <script>
+    console.log ("Waiting 5 seconds for the timer to trigger...");
+
+    var myTimer = setTimeout(timerAction, 5000);
+
+    function timerAction () {
+      console.log ("Timer has triggered.");
+      console.log ("This code is in a function named timerAction.");
+    }
+      
+  </script>-->
+
+</body>
+
+</html>
