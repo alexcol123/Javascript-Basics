@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            padding: 20px;
+            background: gray;
+        }
+
+        #app {
+
+            box-sizing: border-box;
+            padding: 40px;
+            background: lightgray;
+            border: solid 10px darkred;
+            text-align: center;
+            box-shadow: 0 10px 50px black;
+        }
+
+        #output {
+            font-size: 2.7rem;
+            color: darkred;
+        }
+
+        #timeRan {
+            padding-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-top: 20px;
+            padding: 5px;
+            font-weight: bold;
+            background: yellow;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <h3 id="output"></h3>
+        <h5 id="timeRan"></h5>
+
+        <div>
+            <p>The text above will change every 3 seconds, then it will stop</p>
+        </div>
+    </div>
+
+
+    <script>
+        var timeLimit = 0;
+        var myTimer = setInterval(intervalAction, 1000);
+
+        function intervalAction() {
+            output = document.getElementById("output");
+            timeRan = document.getElementById("timeRan");
+            if (timeLimit < 3) {
+                output.innerHTML = " JavaScript ";
+                timeRan.innerHTML = timeLimit + " Seconds in  Duration  ";
+            } else if (timeLimit < 6) {
+                output.innerHTML = " Is the best ";
+                timeRan.innerHTML = timeLimit + " Seconds in  Duration  ";
+            } else if (timeLimit < 9) {
+                output.innerHTML = " Programming Language ";
+                timeRan.innerHTML = timeLimit + " Seconds in  Duration  ";
+            } else if (timeLimit == 10) {
+                output.innerHTML = " .........Hurray JavaScript  ";
+                clearInterval(myTimer);
+            }
+            timeLimit++;
+        }
+    </script>
+
+
+
+
+    <!--  <script>
+    var timeLimit = 10;
+
+    var myTimer = setInterval(intervalAction, 1000);
+    function intervalAction () {
+      document.getElementById("output").innerText = timeLimit + " seconds.";
+      if (timeLimit == 0) {
+        document.getElementById("output").innerText = "Time is up!";
+        clearInterval (myTimer);
+      }
+      timeLimit--;
+    }
+  </script>-->
+</body>
+
+</html>
