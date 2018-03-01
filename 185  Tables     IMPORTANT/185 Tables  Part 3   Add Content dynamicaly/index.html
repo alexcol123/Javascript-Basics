@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        th,
+        td {
+            font-size: 1.4rem;
+            border: 2px solid #ddd;
+            padding: 12px;
+        }
+
+        th {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="resultado"></div>
+
+    <table id="table">
+    <!--  This is the Table -->
+
+    </table>
+
+
+    <script>
+        var resultado = document.getElementById('resultado');
+        var array = [];
+
+        for (var x = 0; x < 100; x++) {
+            array.push(x);
+            console.log(x);
+        
+        }
+
+
+        table = document.getElementById('table');
+
+
+        for (var i = 0; i < (array.length / 10 ); i++) {
+            // creates a new row
+            
+            var newRow = table.insertRow(table.length);
+            
+             for (var j = 0; j < (array.length /10); j++) {
+                   // creates a new cell
+                   var cell = newRow.insertCell(j);
+
+                   // adds Value to the cell
+                   cell.innerHTML = array[i];
+               }
+
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>
