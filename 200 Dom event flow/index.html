@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <div id="output">1
+        <div>2
+            <div>3
+                <div>4
+                    <div>5 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function bup() {
+            console.log(this.innerText);
+        }
+        var d = document.getElementsByTagName('div');
+        for (var x = 0; x < d.length; x++) {
+            d[x].addEventListener('click', bup, true);
+        }
+        
+        // inside the  for loop if you change the  true to a flase you will see that he divs will be read  the 5 down , and if you leave it a to true it wiil start from the 1-5 then  2-5 then 3-5 then 4-5 and finaly 5.  this is important  to select the order in wich you can trigger the functions or events
+    </script>
+</body>
+
+</html>
