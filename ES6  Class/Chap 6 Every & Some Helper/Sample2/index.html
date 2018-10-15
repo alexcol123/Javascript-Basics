@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <h3>Filter Helper</h3>
+  <div id="output">Original Array :</div>
+  <div id="output1">New Array :</div>
+
+  <script>
+    // To create an array from another array 
+
+    var output = document.getElementById('output');
+    var output1 = document.getElementById('output1');
+
+    var names = ['Alexandra', 'Penelope', 'liz'];
+
+    // The every is only true if all conditions are true in this exapmle if all computers have more then 16 ram
+
+    var allNamesGreaterThan4Characters = names.every(function (name) {
+      return name.length > 4;
+    });
+
+
+    // The some  is only true if some conditions are true in this example if some computers have more then 16 ram
+
+    var someNamesGreaterThan4Characters = names.some(function (name) {
+      return name.length > 4;
+    });
+
+
+    console.log(allNamesGreaterThan4Characters);
+
+
+    console.log(someNamesGreaterThan4Characters);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        body {
+            background: #000;
+            padding: 10px;
+            font-size: 1.3rem;
+        }
+
+        #app {
+            background: beige;
+            text-align: center;
+            padding: 20px;
+            border: double 10px red;
+            padding: 20px;
+        }
+
+        h2 {
+            color: red;
+            border: solid 2px red;
+            background: yellow;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 5px;
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div id="app">
+        <h2>Original Array </h2>
+        <div id="originalArray"></div>
+        <h2>Array Without Duplicates </h2>
+        <div id="output"></div>
+
+    </div>
+    <script>
+        var output = document.getElementById("output");
+        var myArray = ["Oranges", "Mangoes", "Pears", "Cherries", "Apples", "Oranges", "Pears", "Bananas"];
+        var originalArray = document.getElementById('originalArray');
+        originalArray.innerHTML = myArray.join(', ');
+        var myArrayClean = removeDup(myArray);
+        output.innerHTML = myArrayClean.join(', ');
+
+        function removeDup(arr) {
+
+            var cArray = [];
+            var frutas = {};
+
+            for (var x = 0; x < arr.length; x++) {
+                console.log(arr[x]);
+                frutas[arr[x]] = "whatever content";
+
+            }
+            console.log(frutas);
+
+            for (fruta in frutas) {
+                cArray.push(fruta);
+            }
+
+            return cArray;
+        }
+
+    </script>
+
+</body>
+
+</html>

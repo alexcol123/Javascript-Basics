@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        body {
+            background: darkgoldenrod;
+            text-align: center;
+            font-size: 1.2rem;
+            color: red;
+            font-weight: bold;
+
+        }
+
+        #game {
+
+            background: black;
+            width: 50%;
+            max-width:  500px;
+            margin: 10% auto;
+            padding: 25px;
+            border: solid 14px maroon;
+            box-shadow: 25px 25px 75px #000;
+            border-radius: 10%;
+        }
+
+        input[type="text"] {
+            width: 40px;
+               font-size: 1.2rem;
+            margin-bottom: 10px;
+            background-color: yellow;
+            text-align: center;
+        }
+
+        input[type="button"] {
+            background: red;
+            padding: 9px;
+            color: white;
+            border-radius: 15px;
+            font-size: 1rem;
+            border: solid 2px #000;
+        }
+
+        input[type="button"]:hover {
+            background: black;
+            color: white;
+            border: solid 3px red;
+        }
+
+
+        #instructions {
+            background: yellow;
+            color: #000;
+            padding: 5px ;
+            border: solid 5px red;
+            max-width: 400px;
+            margin: 14px auto;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 5px #000, 2px 2px 5px #000;
+        
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="game">
+        <h1>Guess The Number </h1>
+        <p id="instructions">If you see an L your guess is too low <br> If you see an H your guess is to High</p>
+        Your Guess :
+        <input type="text" id="code1">
+        <input type="text" id="code2">
+        <input type="text" id="code3">
+        <br>
+        <br>
+        <input type="button" onClick="crack()" value="Guess Now !!">
+        <br>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        var cCode = [];
+        var count = 0;
+        var output = document.getElementById('output');
+        var c1 = document.getElementById('code1');
+        var c2 = document.getElementById('code2');
+        var c3 = document.getElementById('code3');
+        for (var x = 0; x < 3; x++) {
+            cCode.push(Math.floor(Math.random() * 9));
+        }
+        console.log(cCode);
+
+        function crack() {
+            count = 0;
+            var guess = [c1.value, c2.value, c3.value];
+            for (var x = 0; x < cCode.length; x++) {
+                output.innerHTML += checkNum(guess[x], cCode[x]);
+            }
+            if (count == 3) {
+                output.innerHTML += " You Guessed it <br>";
+            } else {
+                output.innerHTML += "<br>";
+            }
+
+
+        }
+
+        function checkNum(a, b) {
+            if (a > b) {
+                return "L";
+            }
+            if (a < b) {
+                return "H";
+            }
+            if (a == b) {
+                count++;
+                return a;
+            }
+        }
+    </script>
+</body>
+
+</html>

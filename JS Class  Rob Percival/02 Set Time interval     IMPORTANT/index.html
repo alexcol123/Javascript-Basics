@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <title>setTimeout 2</title>
+    <meta name="description" content="setTimeout 2. Version 1.0" />
+    <meta name="author" content="The Gamer's Guide to Coding" />
+    <meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+
+</head>
+
+<body>
+
+    <h2 id="textChange">This Text Will Change every 7 seconds </h2>
+
+    <p>Open the browser console window to see the result.</p>
+
+
+
+    <script>
+        console.log("Waiting 7 seconds for the timer to trigger...");
+        var myTimer = setInterval(timerAction, 7000);
+
+        function timerAction() {
+            textChange = document.getElementById('textChange');
+            console.log("Timer has triggered.");
+            textChange.innerHTML=  " New text ";
+        }
+
+    </script>
+
+
+</body>
+
+</html>

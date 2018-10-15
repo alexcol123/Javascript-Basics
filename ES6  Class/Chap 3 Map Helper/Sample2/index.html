@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Sample</h3>
+    <div id="output"><b>New Array of Models:</b> </div>
+<br>
+    <div id="output1"><b>New Array of Prices:</b> </div>
+  
+
+    <script>
+        // To create an array from another array 
+
+        var output = document.getElementById('output');
+        var output1 = document.getElementById('output1');
+
+        var cars = [{
+                model: 'Buick',
+                price: 'Cheapo'
+            },
+            {
+                model: 'Camaro',
+                price: 'Expensivo'
+            },
+            {
+                model: 'Bently',
+                price: 'Mucho Expensivo'
+            }
+        ];
+
+        var models = cars.map(function (car) {
+            return car.model;
+        });
+
+         var prices = cars.map(function (car) {
+            return car.price;
+        });
+
+        console.log(models);
+        console.log(prices);
+       
+        output.innerHTML += models;
+        output1.innerHTML += prices;
+    </script>
+
+</body>
+
+</html>

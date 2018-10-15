@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <title>Complete JavaScript Course</title>
+</head>
+<style>
+    body {
+        background: gold;
+        font-size: 1.1rem;
+        padding: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #app {
+        background: white;
+        padding: 10px;
+        border: solid 15px black;
+        max-width: 600px;
+        margin: auto;
+
+    }
+
+    input[type='button'] {
+        margin: 15px;
+        padding: 8px;
+        background: red;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        box-shadow: 3px 3px 14px #000;
+    }
+
+    #output {
+        margin: 20px;
+    }
+
+    #OriginalArray {
+        background: gold;
+        padding: 8px;
+        border: solid 2px black
+    }
+</style>
+
+<body>
+
+    <div id="app">
+        <h4>ORIGINAL ARRAY= </h4>
+        <p><span id='OriginalArray'></span></p>
+
+        <input type="button" onClick="start()" value="Click to Shuffle Array !">
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        var secretWord = ['Goku', 'Gohan', 'Vegeta', 'Trunks', 'Krillin', 'Frieza','Poccolo','Cell' ];
+        var output = document.getElementById('output');
+        var originalArray = document.getElementById('OriginalArray');
+        originalArray.innerHTML = secretWord.join(', ');
+
+
+
+        function start() {
+            shuffleArray(secretWord);
+            output.innerHTML += secretWord.join(', ') + "<br><br>";
+        }
+
+        function shuffleArray(arr) {
+            for (var x = arr.length - 1; x > 0; x--) {
+                var holder = Math.floor(Math.random() * (x - 1));
+                var temp = arr[x];
+                arr[x] = arr[holder];
+                arr[holder] = temp;
+            }
+            return arr;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

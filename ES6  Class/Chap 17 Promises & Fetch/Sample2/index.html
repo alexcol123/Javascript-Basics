@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Sample 3</h3>
+    <div id="output">
+        <b>New Array of Models:</b>
+    </div>
+    <br>
+    <div id="output1">
+        <b>New Array of Prices:</b>
+    </div>
+
+
+    <script>
+        //Note 
+        // Promises can be resolve  or rejected
+        //flow if  resolve then use .then
+        // flow if reject then use catch
+
+        promise = new Promise((resolve, reject) => {
+              //Note 
+            // from     resolve(); to  reject(); to test
+            resolve();
+           //reject();
+        });
+
+        promise
+            .then(() => {
+                console.log("Finally Finished");
+            })
+            .then(() => {
+                console.log("I alson ran !!!");
+            })
+            .catch(() => {
+                console.log("uh ohh !!!");
+            })
+    </script>
+
+</body>
+
+</html>

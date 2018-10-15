@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Filter Helper</h3>
+    <div id="output">Original Array :</div>
+    <div id="output1">New Array :</div>
+
+    <script>
+        var expense = {
+            type: 'business',
+            amount: '$45 USD'
+        };
+
+        // ES5 way to move the objects property into a variable
+
+       var type = expense.type;
+        var amount = expense.amount;
+
+        console.log(type);
+        console.log(amount);
+ 
+        console.log("------ the ES6 way -- Below -----");
+        // ES6  way to move the objects property into a variable
+
+           var expense1 = {
+            type1: 'business',
+            amount1: '$45 USD'
+        };
+
+       // const {type1} = expense1 ;
+       // const {amount1} = expense1;
+       // you an conbine the 2 lines avove to creat both at once
+
+       const {type1, amount1 } = expense1;
+
+        console.log(type1);
+        console.log(amount1);
+
+
+    </script>
+
+</body>
+
+</html>

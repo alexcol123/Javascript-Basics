@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <h3>Filter Helper</h3>
+  <div id="output1"></div>
+  <div id="output2"></div>
+  <div id="output3"></div>
+  <div id="output4"></div>
+
+  <script>
+    // To create an array from another array 
+
+    var output1 = document.getElementById('output1');
+    var output2 = document.getElementById('output2');
+    var output3 = document.getElementById('output3');
+    var output4 = document.getElementById('output4');
+
+
+
+
+    //  IMPORTANT
+    //  IMPORTANT
+    //  IMPORTANT
+
+    //  Note : All this code 
+    //  can be slightly reduce whit this code
+
+
+    function createBookShop(inventory) {
+      return {
+        inventory,
+        // inventory: inventory,
+
+        inventoryValue() {
+          //inventoryValue: function () {
+          return this.inventory.reduce((total, book) => total + book.price, 0);
+
+        },
+        priceForTitle (title) {
+        //priceForTitle: function (title) {
+          return this.inventory.find(book => book.title === title).price;
+        }
+      };
+    }
+
+    const inventory = [{
+        title: 'Harry Potter',
+        price: 10
+      },
+      {
+        title: 'Eloquent Javascript',
+        price: 25
+      },
+      {
+        title: 'The alquimist',
+        price: 14
+      }
+    ];
+
+    const bookShop = createBookShop(inventory);
+
+    console.log(bookShop.inventoryValue());
+    console.log(bookShop.priceForTitle('The alquimist'));
+
+    output1.innerHTML = `total book inventory is: ${bookShop.inventoryValue()}`;
+    output2.innerHTML = `Book cost is:${ bookShop.priceForTitle('The alquimist')}`;
+    
+  </script>
+
+</body>
+
+</html>

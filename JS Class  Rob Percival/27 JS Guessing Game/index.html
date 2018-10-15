@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tip Calculator</title>
+
+		<link rel="stylesheet" href="mystyle.css">
+
+	</head>
+
+
+
+	<body>
+		<h1>Testing JS</h1>
+
+
+
+
+
+
+
+		<script>
+
+
+			var animals = ["cat", "dog", "rabbit","bird", "fish"];
+			var randomIndex = Math.floor(Math.random()* animals.length);
+			console.log(randomIndex);
+			var randomAnimal =animals[randomIndex];
+			var message=prompt("Which index value is "  + randomAnimal);
+			var  response = (message == randomIndex)? "Correct": " Wrong , it was " +randomIndex;
+
+			
+			console.log(randomIndex);
+			alert(response);
+
+
+			
+			console.log(Math.random()* 10);
+
+		</script>
+
+
+
+
+		<!--	<script src="myscript.js"></script> -->
+
+	</body>
+</html>

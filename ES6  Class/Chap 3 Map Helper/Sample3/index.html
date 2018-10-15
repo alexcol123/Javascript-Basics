@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Sample 3</h3>
+    <div id="output">
+        <b>New Array of Models:</b>
+    </div>
+    <br>
+    <div id="output1">
+        <b>New Array of Prices:</b>
+    </div>
+
+
+    <script>
+        // To create an array from another array 
+        var paints = [{
+            color: 'red',
+            quality: 'ok'
+        }, {
+            color: 'blue',
+            quality: 'good '
+        }, {
+            color: 'yellow',
+            quality: 'exelent'
+        }];
+
+
+        function pluck(array, property) {
+            return array.map((prop) => {
+
+                // you can change the  property bellow from color to quality 
+                return prop.color;
+            });
+        }
+        
+
+console.log( pluck(paints, 'color'));
+
+
+
+    </script>
+
+</body>
+
+</html>

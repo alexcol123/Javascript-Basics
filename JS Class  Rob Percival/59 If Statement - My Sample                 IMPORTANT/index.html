@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+    <title>Javascript</title>
+</head>
+
+<body>
+    <h3>Js DOM </h3>
+
+    <div id="output">Ternary Operator </div>
+
+    <script>
+        var userNames = ["Mike", "John", "Larry"];
+
+        var userInput = prompt("What is you name?");
+
+        var output = document.getElementById("output");
+
+        var htmlOutput = "";
+
+        if (userNames.indexOf(userInput) > -1) {
+            alert("Hello, " +userInput);
+            htmlOutput = "Acess Granted, ";
+            var age = prompt("Enter your Age?");
+            htmlOutput += age > 18 ? "To Adult Section" : " To Kidz Section";
+        } else {
+            htmlOutput = "access Denied";
+        }
+
+        output.innerHTML = htmlOutput + ", " + userInput;
+    </script>
+</body>
+
+</html>
+

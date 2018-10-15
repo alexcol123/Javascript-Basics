@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>setInterval Clock 2</title>
+<meta name="description" content="setInterval Clock 2. Version 1.0" />
+<meta name="author" content="The Gamer's Guide to Coding" />
+<meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+
+</head>
+
+<body>
+  <p id="clock">&nbsp;</p>
+  <script>
+    var counter = 0;
+    var timeLimit = 10;
+
+    var myTimer = setInterval(intervalAction, 1000);
+    function intervalAction () {
+      document.getElementById("clock").innerText = (timeLimit - counter) + " seconds.";
+      counter++;
+      if (counter > timeLimit) {
+        document.getElementById("clock").innerText = "Time is up!";
+        clearInterval (myTimer);
+      }
+    }
+  </script>
+</body>
+
+</html>

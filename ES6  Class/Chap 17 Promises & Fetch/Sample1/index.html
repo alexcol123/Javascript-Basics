@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Sample 3</h3>
+    <div id="output">
+        <b>New Array of Models:</b>
+    </div>
+    <br>
+    <div id="output1">
+        <b>New Array of Prices:</b>
+    </div>
+
+
+    <script>
+        //Note 
+        
+        url = "https://jsonplaceholder.typicode.com/posts/"
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data=> console.log(data));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Sample 3</h3>
+    <div id="output">
+        <b>New Array of Models:</b>
+    </div>
+    <br>
+    <div id="output1">
+        <b>New Array of Prices:</b>
+    </div>
+
+
+    <script>
+        const testingTeam = {
+            lead: 'Amanda',
+            tester: 'Bill',
+            [Symbol.iterator]: function* () {
+                yield this.lead;
+                yield this.tester;
+            }
+        };
+
+        const engineeringTeam = {
+            testingTeam: testingTeam,
+            // FOr  line avove you can avoid repeatina and just type:
+            // testingTeam,
+            size: 3,
+            department: 'Engineering',
+            lead: 'Jill',
+            manager: 'Alex',
+            engineer: 'Dave',
+            [Symbol.iterator]: function* () {
+                yield this.lead;
+                yield this.manager;
+                yield this.engineer;
+                yield* this.testingTeam;
+            }
+       
+           
+        };
+
+
+
+        const names = [];
+
+        for (let name of engineeringTeam) {
+            names.push(name);
+        }
+
+        console.log(names);
+    </script>
+
+</body>
+
+</html>

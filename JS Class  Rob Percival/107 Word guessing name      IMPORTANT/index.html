@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+<style>
+    body {
+        padding: 20px;
+        color: white;
+        background: #815e32;
+        font-size: 1.2rem;
+
+    }
+
+    #game {
+        background: black;
+        padding: 20px;
+        border: solid 5px red;
+        width: 50%;
+        margin: 100px auto;
+        text-align: center;
+
+    }
+
+    input[type="button"] {
+        background: red;
+        color: white;
+        padding: 8px 10px;
+        ;
+        font-weight: bold;
+        margin: 20px;
+        font-size: 1.2rem;
+    }
+
+    #output {
+        background: red;
+        color: white;
+        padding: 5px;
+        font-size: 1.5rem;
+        border: solid 2px white;
+    }
+</style>
+
+<body>
+
+    <div id="game">
+        <div id="output"></div>
+        <input type="button" onClick="start()" value="Start Game">
+
+        <h2>Guess the Animal Name </h2>
+        <p><b>Posible Answers : </b><span  id="possibleAnimals"></span></p>
+
+    </div>
+
+    <script>
+        var secretWord = ['Dog', 'Cat', 'Mouse', 'Elephant','Horse'];
+        var mysteryNum;
+        var output = document.getElementById('output');
+        var possibleAnimals = document.getElementById('possibleAnimals');
+        possibleAnimals.innerHTML = secretWord.join(', ');
+
+
+        function start() {
+            mysteryNum = Math.floor(Math.random() * secretWord.length);
+            getSecret(prompt("Guess the Animal  ?"));
+        }
+
+        function getSecret(secret) {
+            if (secret == secretWord[mysteryNum]) {
+                output.innerHTML = "You Are Correct <br> Play Again";
+            } else {
+                getSecret(prompt("You wrong, Guess Again ?"));
+            }
+        }
+    </script>
+
+</body>
+
+</html>

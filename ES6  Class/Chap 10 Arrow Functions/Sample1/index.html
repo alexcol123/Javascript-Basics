@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <h3>Arrow Functions</h3>
+  <div id="output">Original Array :</div>
+
+  <script>
+    const addFirst = function (a, b) {
+      return a + b;
+    }
+
+    console.log(addFirst(5, 10));
+
+
+
+
+    // Note the function above can be transformed into an arrow fuction by writting it this way
+
+    const addSecond = (a, b) => {
+      return a + b;
+    }
+
+    console.log(addSecond(5, 10));
+
+
+
+
+    // the arrow function can be reduce even more only if it has one single expression  and transfored into this
+    // this is called in implicit return and you no longer need to write the return
+
+    const addThird = (a, b) => a + b;
+
+    console.log(addThird(5, 10));
+
+  </script>
+
+</body>
+
+</html>

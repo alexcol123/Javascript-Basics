@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>JS Game</title>
+
+		<style>
+			body{
+				background: goldenrod;
+				color: white;
+			}
+			.button1{
+				margin: 10px 0 0 100px; ;
+				padding: 5px;
+				color: red;
+				background-color: black;
+				border: solid 2px red;
+				box-shadow: 2px 2px 5px black;
+			}
+			.button1:hover{
+				padding: 5px;
+				color: red;
+				background-color: white;
+				border: solid 2px black;
+				box-shadow: 2px 2px 5px red;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2>Nested Loops Table</h2>
+
+		<div id="output"></div>
+
+		<input class="button1" type="button" onClick="myFun()" value="Click Me!">
+
+		<script>
+			var output = document.getElementById("output");
+			
+			var adj = ["Naughty ", "Skanky " , "ChikenHead ", "Hoodrat ", "CumDump "];
+			
+			
+			
+			function myFun(){
+				var question = prompt("What is your Name?");
+				
+				var nameAdj = Math.floor(Math.random()*adj.length);
+				
+				output.innerHTML += adj[nameAdj] + question + "<br>";
+			
+			}
+
+
+		</script>
+
+
+	</body>
+
+
+</html>

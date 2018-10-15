@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <title>setTimeout 2</title>
+    <style>
+        #textChange{
+        color: red;
+        background: yellow;
+            margin: 10px;
+            padding: 7px;
+            border: solid 2px black;
+            text-align: center;
+            width: 500px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <h2>The text below will change  2 times and then it will stop .</h2>
+
+    <h2 id="textChange">This Text Will Change every 3 seconds </h2>
+
+
+
+
+
+    <script>
+        var counter = 0;
+        console.log('waiting 3 seconds for the timer to trigger ...');
+
+        var myTimer = setInterval(intervalAction, 3000);
+        var textChange = document.getElementById('textChange');
+
+        function intervalAction() {
+            textChange.innerHTML = "Timer has triggered";
+            textChange.innerHTML = "Waiting for retrigering...";
+            counter++;
+            if (counter > 2) {
+                textChange.innerHTML = "Timmer  has ended ";
+                clearInterval(myTimer);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

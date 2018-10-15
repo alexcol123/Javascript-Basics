@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>JS Game</title>
+	</head>
+
+	<body>
+		<h3>Loops</h3>
+		<div id="output">Guess The Password</div>
+		<br>
+
+		<script>
+			/*	
+
+		var output = document.getElementById("output");
+        var secret = "javascript";
+
+        var crackCode = prompt("What is the secret word?");
+
+        while (crackCode != secret) {
+            crackCode = prompt("guess again?");
+        };
+
+        output.innerHTML = "You got it. The corret password is : " +crackCode;
+			*/
+
+			var output = document.getElementById("output");
+			var secret = "Alex"
+
+			var crackCode = prompt("Cual es la clave secreta");
+			
+			while (crackCode != secret){
+				crackCode = prompt("Adivina de nuevo");
+			};
+			
+			output.innerHTML = "Adivinaste correctamente, La clave secreta es : <br>" + crackCode;
+
+		</script>
+
+
+	</body>
+
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <h3>Arrow Functions</h3>
+  <div id="output">Original Array :</div>
+
+  <script>
+    const team = {
+      members: ['Jane', 'Bill', 'Stewie'],
+      teamName: 'Sharks',
+      teamSummary: function () {
+        // this === team
+        return this.members.map((member) => {
+          return `${member} is on team ${this.teamName}`;
+        })
+      }
+    };
+
+   console.log( team.teamSummary());
+  </script>
+
+</body>
+
+</html>

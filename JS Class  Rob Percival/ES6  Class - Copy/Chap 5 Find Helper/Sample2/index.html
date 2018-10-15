@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Filter Helper</h3>
+    <div id="output">Original Array :</div>
+    <div id="output1">New Array :</div>
+
+    <script>
+        // To create an array from another array 
+
+        var output = document.getElementById('output');
+        var output1 = document.getElementById('output1');
+
+        var users = [{
+                name: 'Henry'
+            },
+            {
+                name: 'Carmen'
+            },
+            {
+                name: 'Ethan'
+            }
+        ];
+            // Note  Find helper only finds the 1st element that matches it does not continue so for example if there were 2 Carmens the find will only find the 1st
+            
+        var userExists = users.find(function (user) {
+            return user.name === 'Carmen';
+        });
+
+        console.log(userExists);
+        output.innerHTML = userExists.name;
+        
+    </script>
+
+</body>
+
+</html>

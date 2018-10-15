@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Filter Helper</h3>
+    <div id="output">Original Array :</div>
+    <div id="output1">New Array :</div>
+
+    <script>
+        // To create an array from another array 
+
+        var output = document.getElementById('output');
+        var output1 = document.getElementById('output1');
+
+
+
+        var post = {
+            id: 4,
+            title: 'New Post'
+        };
+
+        var comments = [{
+                postId: 4,
+                content: "awesome post"
+            },
+            {
+                postId: 3,
+                content: "It was ok "
+            },
+            {
+                postId: 4,
+                content: "neat"
+            },
+            {
+                postId: 4,
+                content: "Amazing stuff"
+            },
+        ];
+
+        function commentsForPost(post, comments) {
+            return comments.filter(function (comment) {
+                return comment.postId == post.id;
+            });
+        }
+
+      console.log(  commentsForPost(post, comments));
+    </script>
+
+</body>
+
+</html>

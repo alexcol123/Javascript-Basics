@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <h3>Reduce Helper</h3>
+  <div id="output">Original Array :</div>
+
+  <script>
+    var primaryColors = [{
+        color: 'red',
+        brand: 'bmw'
+
+      },
+      {
+        color: 'white',
+        brand: 'ferrari'
+      },
+      {
+        color: 'blue',
+        brand: 'mazda'
+      },
+    ];
+
+    var myNewArray = primaryColors.reduce(function (previous, primaryColor) {
+      previous.push(primaryColor.color);
+      return previous;
+    }, []);
+
+       var myBrands = primaryColors.reduce(function (previous, primaryColor) {
+      previous.push(primaryColor.brand);
+      return previous;
+    }, []);
+
+
+    console.log(myNewArray);
+
+    console.log(myBrands);
+  </script>
+
+</body>
+
+</html>

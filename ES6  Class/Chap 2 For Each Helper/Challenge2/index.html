@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Challenge 2</h3>
+    <div id="output"> result here</div>
+
+    <script>
+        var images = [{
+                height: 10,
+                width: 30
+            },
+            {
+                height: 20,
+                width: 90
+            },
+            {
+                height: 54,
+                width: 32
+            }
+        ];
+        var areas = [];
+
+        images.forEach(function (image) {
+            areas.push(image.width * image.height);
+            return areas;
+        });
+        console.log(areas);
+        
+    </script>
+
+</body>
+
+</html>

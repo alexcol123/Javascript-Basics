@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>JS Game</title>
+
+		<style>
+			body{
+				background: black;
+				color: green;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h2>Nested Loops Table</h2>
+
+		<div id="output">
+			<h1>Shopping List </h1>
+
+		</div>
+
+
+		<script>
+			/*	var output = document.getElementById("output");
+			var addItem;
+			var shoppingList=[];
+			var howManyTimes= prompt("How Many items would you like to add ?")
+			for (var x =0; x < howManyTimes; x++){
+				addItem = prompt("What do you want to add ?");
+				if(addItem == ""){break;}
+				shoppingList.push(addItem);
+			}
+
+			for(myItem  of shoppingList){
+				output.innerHTML += myItem +"<br>";
+			}
+            */
+		
+			var output = document.getElementById("output");
+			var addItem;
+			var shoppingList = [];
+			var howManyTimes = prompt("How many items would you like to add ?");
+			for(var x =0; x < howManyTimes; x++){
+				addItem = prompt("What do you want to add ?");
+				if(addItem ==  ""){break;}
+				shoppingList.push(addItem);
+			}
+			for(myItem of shoppingList){
+				output.innerHTML += myItem + "<br>";
+			}
+
+
+		</script>
+
+
+	</body>
+
+
+</html>

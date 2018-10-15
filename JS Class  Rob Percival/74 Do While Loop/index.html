@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>JS Game</title>
+	</head>
+
+	<body>
+		<h3>Loops</h3>
+		<div id="output">loops</div>
+		<br><br><br>
+
+		<div id="output1">loops2 </div>
+		<script>
+			var output = document.getElementById("output");
+
+			var answer = prompt("How Many time do you want me to loop ? ");
+			if( typeof Number)
+				var x =0;
+			do {
+				x++;
+				output.innerHTML += "Value of x = "+x+"<br>";
+
+			}
+			while (x< Number(answer));
+			output.innerHTML += "Final Value of X = "+x+"<br>";
+
+
+			var output1 = document.getElementById("output1");
+			var y = 0;
+			do{
+				if(y % 2 ===0){
+					output1.innerHTML += "valor de Y = "+y+ "<br>";
+				}
+				y++;
+			}
+			while (y<30);
+			output1.innerHTML+= "Final value of Y " +y+ "<br>";
+
+		</script>
+
+
+	</body>
+
+
+</html>

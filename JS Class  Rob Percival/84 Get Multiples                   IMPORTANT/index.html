@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>JS Game</title>
+
+		<style>
+			body{
+				background: goldenrod;
+				color: white;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h2>Nested Loops Table</h2>
+
+		<div id="output"></div>
+
+
+		<script>
+
+			var output = document.getElementById("output");
+			
+			subTotal = 0;
+
+			for(x=1; x<1000; x++){
+				if( x % 5 == 0 ){
+					subTotal += x;
+					document.write("X its equal to =  " +x+  ",  and The SubTotal = " +subTotal + "<br>");
+				}
+				
+			
+			} 
+				document.write("<br> The  Grand Total is equal to : " + subTotal);
+
+		</script>
+
+
+	</body>
+
+
+</html>

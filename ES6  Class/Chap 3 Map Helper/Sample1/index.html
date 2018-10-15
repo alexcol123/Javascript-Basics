@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Sample</h3>
+    <div id="output">Original Array :</div>
+    <div id="output1">New  Array :</div>
+
+    <script>
+      // To create an array from another array 
+
+        var numbers = [1, 2, 3];
+        var doubleNumbers = [];
+        var output = document.getElementById('output');
+        var output1 = document.getElementById('output1');
+
+        var doubled = numbers.map(function(number){
+            return  number *2;
+            
+        });
+        
+        
+         output.innerHTML += numbers;
+         output1.innerHTML += doubled;
+         console.log(doubled);
+        
+
+
+    </script>
+
+</body>
+
+</html>

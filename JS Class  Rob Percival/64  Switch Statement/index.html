@@ -1,0 +1,40 @@
+<html>
+
+	<head>
+		<title>Javascript</title>
+	</head>
+
+	<body>
+		<h3>Js DOM </h3>
+
+		<div id="output">Ternary Operator  </div>
+
+		<script>	
+			var myTime = prompt("what Are You Doing?");
+
+			var output = document.getElementById("output");
+
+			var html;
+
+
+			switch (myTime){
+				case "wake up":
+					html = "It's 8:00 am";
+					break;
+				case "lunch":
+					html = "It's 1:00 pm";
+					break;
+				case "dinner":
+					html = "It's 6:00 pm";
+					break;
+				default:
+					html = "Notting to do ";
+			}
+
+			output.innerHTML = html;
+
+		</script>
+	</body>
+
+</html>
+

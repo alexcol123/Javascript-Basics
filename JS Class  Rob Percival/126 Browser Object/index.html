@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tip Calculator</title>
+
+		<link rel="stylesheet" href="mystyle.css">
+
+	</head>
+
+
+
+	<body>
+		<h1>Testing JS</h1>
+
+			<div id="wrapper"></div>
+
+		<script>
+			
+			var output = document.getElementById("wrapper");
+
+			console.dir(window);
+			for(var prop in window){
+				document.write(prop + " " + window[prop] + "<br>")
+			}
+
+			output.innerHTML+= "Height:" + window.innerHeight + " " +  "Width:" + window.innerWidth + "<br><br>";	
+			
+				output.innerHTML+= window.location  + "<br><br>"; 
+		</script>
+
+
+
+
+		<!--	<script src="myscript.js"></script> -->
+
+	</body>
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: #bbb;
+
+        }
+
+        #app {
+            color: white;
+            background: goldenrod;
+            padding: 25px;
+            border: double 9px #fff;
+            font-size: 1.4rem;
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+            box-shadow: 5px 10px 70px #000;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <h3>Trigger Button Click on Enter</h3>
+        <p>Press the "Enter" key inside the input field to trigger the button.</p>
+
+        <input id="myInput" value="Some text..">
+        <button id="myBtn" onclick="javascript:alert('Hello World!')">Button</button>
+    </div>
+
+    <script>
+        
+        var input = document.getElementById("myInput");
+        input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("myBtn").click();
+            }
+        });
+        
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<html>
+
+	<head>
+		<title>Javascript</title>
+	</head>
+
+	<body>
+		<h3>Js DOM </h3>
+
+		<div id="output">Ternary Operator  </div>
+
+		<script>	
+
+			var userNames = ["Jenny","Martha","liz"];
+			var userInput = prompt("what is your name?");
+			var output = document.getElementById("output");
+			var htmlOutput = "";
+			if(userNames.indexOf(userInput) > -1) {
+				alert("hello");
+				htmlOutput = "welcome it was true";
+				var age = prompt("age");
+				htmlOutput += age > 18 ? " You are Legal Letz Fuck" : " Ill have to wait a few more years";
+			} else {
+				htmlOutput =  "denied was not true ";   
+			}
+			output.innerHTML = htmlOutput + ", "+ userInput;
+
+		</script>
+	</body>
+
+</html>
+

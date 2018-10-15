@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Challenge 1 </h3>
+    <div id="output"> </div>
+
+
+    <script>
+        var output = document.getElementById('output');
+        var actors = [{
+                name: "Silverster Stalone"
+            },
+            {
+                name: "Tom Cruise "
+            },
+            {
+                name: "Jean Cloud Van Damme "
+            }
+        ]
+
+        var posts = [{
+                id: 1,
+                title: "Rocky Balboa"
+            },
+            {
+                id: 2,
+                title: "Apollo Creed"
+            },
+            {
+                id: 3,
+                title: "Ivan Drago"
+            }
+        ];
+
+        function handlePost() {
+            posts.forEach(function (post) {
+                actorsMovie(post);
+            });
+        }
+
+
+        function actorsMovie(a) {
+            actors.forEach(function (actor) {
+                output.innerHTML += "In this movie " + actor.name + " fights " + a.title + "<br>";
+            });
+        }
+
+
+        handlePost();
+    </script>
+
+</body>
+
+</html>

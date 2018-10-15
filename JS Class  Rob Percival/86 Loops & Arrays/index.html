@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>JS Game</title>
+
+		<style>
+			body{
+				background: black;
+				color: green;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h2>Nested Loops Table</h2>
+
+		<div id="output"></div>
+
+
+		<script>
+			var output = 
+
+				document.getElementById("output");
+			var userNames = ["Scopion", "Johnny Cage", "Kung Lao", " Kitana"];
+
+			// Using for loop 
+			output.innerHTML += "<br>Using for loop <br>  <br>";
+			for (var x = 0; x < userNames.length; x++) {
+				output.innerHTML += userNames[x] + "<br>";
+			}
+			// Using for loop to reverso array order 
+			output.innerHTML += "<br>Using for loop to reverso array order  <br>  <br>";
+
+			for (var x = userNames.length - 1; x >= 0; x--) {
+				output.innerHTML += userNames[x] + "<br>";
+			}
+
+			output.innerHTML += "<br>Using New ES6 Format  <br>  <br>";
+
+			// Using New ES6 Format 
+
+			output.innerHTML += "For in<br>";
+			for (v of userNames) {
+				output.innerHTML += v + "<br>";
+			}
+			output.innerHTML += "<br>Using for while loop   <br>  <br>";
+
+			// Using for while loop 
+
+			var x = 0;
+			while (userNames[x]) {
+				output.innerHTML += userNames[x] + "<br>";
+				x++;
+			}
+
+		</script>
+
+
+	</body>
+
+
+</html>

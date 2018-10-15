@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tip Calculator</title>
+
+		<link rel="stylesheet" href="mystyle.css">
+
+	</head>
+
+
+
+	<body>
+		<h1>Testing JS</h1>
+
+		<div class="container">
+			<form>
+				<label for="">1st Number</label><br>
+				<input type="text" id="firstNumber" ><br>
+				<label for="">2nd Number</label><br>
+				<input type="text" id="secondNumber" ><br><br>
+
+				<input type="button" onclick="isGreater()" value="Is Greater"  id="button1" >	
+			</form>
+
+			<p>The Greatest Number is:  <br>
+				<span id="result"></span>
+			</p>
+		</div>
+
+
+
+		<script>
+
+			function isGreater(){
+				num1 = document.getElementById("firstNumber").value;
+				num2 = document.getElementById("secondNumber").value;
+				
+				var message = (Number(num1) > Number(num2))? document.getElementById("result").innerHTML= " the first integer is greater num 1 is " + num1 + " number 2 is "  + num2  : document.getElementById("result").innerHTML= " the second integer is greater num 2 is " + num2 + " number 1 is "  + num1  
+				
+			}
+
+
+
+
+
+
+
+
+		</script>
+
+
+
+
+		<!--	<script src="myscript.js"></script> -->
+
+	</body>
+</html>

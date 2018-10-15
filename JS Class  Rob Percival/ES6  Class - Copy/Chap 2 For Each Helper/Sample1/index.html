@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Sample</h3>
+    <div id="output"> result here</div>
+
+    <script>
+        // Create an array of numbers 
+        var numbers = [1, 2, 3, 4, 5];
+
+
+        // Create a variable to hold the sum
+        var sum = 0;
+
+        // loop ovar the array, incrementing the sum variable
+        numbers.forEach(function(number) {
+            sum += number;
+        });
+        // print  the sum variable
+        console.log(sum);
+        var output = document.getElementById('output');
+        output.innerHTML = sum;
+    </script>
+
+</body>
+
+</html>

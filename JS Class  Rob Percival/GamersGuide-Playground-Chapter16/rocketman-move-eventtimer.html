@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>Rocketman Event Timer</title>
+<meta name="description" content="Rocketman Event Timer. Version 1.0" />
+<meta name="author" content="The Gamer's Guide to Coding" />
+<meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+
+<style>
+img {
+  position: absolute;
+  left: 0px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-property: left;
+}
+</style>
+</head>
+
+<body>
+  <img id="rocketeer" src="./assets/rocketeer-small.png" alt="" onclick="this.style.left='200px'" />
+  <script>
+    var rocketeer = document.getElementById("rocketeer");
+    rocketeer.addEventListener("transitionend", timer);
+    function timer() {
+      console.log ("The transition has ended");
+    }
+  </script>
+</body>
+</html>

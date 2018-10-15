@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>JS Game</title>
+	</head>
+
+	<body>
+		<h3>Loops</h3>
+		<div id="output"></div>
+		<br>
+
+
+
+		<script>
+
+
+			var output = document.getElementById("output");
+			var caloriesBanana = 89;
+			var bananas = prompt("How many bananas do you want to eat?");
+			var total = 0;
+			var holder;
+
+			for(var x = 1; x <= bananas; x++){
+				total += caloriesBanana;
+				holder = x > 1 ? "bananas another" : "banana"
+				output.innerHTML += "You ate "+x+" "+holder +"  "+caloriesBanana+" calories added to your total now at  "+total+"<br>";
+			}
+			output.innerHTML += "Your total calorie count is "+total;
+
+
+
+		</script>
+
+
+	</body>
+
+
+</html>

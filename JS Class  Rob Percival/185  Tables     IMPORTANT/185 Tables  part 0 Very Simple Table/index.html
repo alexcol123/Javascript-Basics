@@ -1,0 +1,87 @@
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+
+
+    <style>
+        bodY {
+            background: beige;
+            padding: 20px;
+        }
+
+        #message {
+            margin: 10px 2px 50px 0;
+        }
+
+
+        .numbers {
+            background: orange;
+        }
+
+        .numbers:hover {
+            background: red;
+        }
+
+        #id33 {
+            background: blue;
+        }
+
+        table {
+            border: double 7px gray;
+        }
+
+        td {
+            border: 2px solid #ddd;
+            padding: 10px;
+        }
+
+        td:first-child {
+            width: 150px; //  background: #ff8080;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        td:nth-child(2) {
+            width: 60px;
+            text-align: center;
+        }
+
+        td:nth-child(3) {
+            width: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <div>
+        <input type="text" id="addFriend">
+        <input type="button" id="addNew" value="Add Friend"> </div>
+    <div class="output"></div>
+
+
+    <script>
+        var myArray = ["Laurence", "Mike", "John", "Larry", "Kim", "Joanne", "Lisa", "Janet", "Jane"];
+
+        window.onload = build;
+
+        function build() {
+            var html = "<h1> Alexander Table </h1> <table>";
+            for (var x = 0; x < myArray.length; x++) {
+                html += '<tr><td id="id' + x + '" class="numbers">' + x + '</td> <td> Hello</td><td id="id3' + (x + 1) + '">' + myArray[x] + '</td></tr>'
+            }
+            document.querySelector('.output').innerHTML = html;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
+
+ 

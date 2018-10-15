@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Complete JavaScript Course</title>
+	</head>
+
+
+
+	<body>
+
+		<h1>Index 1</h1>
+
+		<h1>  <div id="wrapper">Main Page</div></h1> <br>
+		<a href="index3.html">Index3</a> <a href="index.html">Index</a> <a href="index2.html">Index2</a>
+		<input type="button" onclick="startInt()" value="start">
+		<input type="button" onclick="clearInt()" value="stop">
+
+		<script>
+			var output = document.getElementById('wrapper');
+			window.setTimeout(updateWrapper, 7000);
+			var myTimer;
+
+			// To change the content of a DIV
+			function updateWrapper() {
+				document.getElementById('wrapper').innerHTML = " Welcome to my website :)";
+			}
+
+			// tO display  a modal or alert in a certain time ,  thid example 3 seconds
+			function startInt() {
+				myPopup();
+				myTimer = window.setTimeout(startInt, 3000);
+
+			}
+
+
+			function clearInt() {
+				window.clearInterval(myTimer);
+			}
+
+			function myPopup() {
+				alert("Hello");
+			}
+		</script>
+	</body>
+
+</html>

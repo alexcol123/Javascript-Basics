@@ -1,0 +1,53 @@
+<html>
+
+	<head>
+		<title>Javascript</title>
+	</head>
+
+	<body>
+		<h3>Js DOM </h3>
+
+		<div id="output"> </div>
+
+		<script>	
+			var answer = "Something went wrong";
+			var output = document.getElementById("output");
+
+			var question = prompt("Ask Me Anithing");
+			var randomNumber = Math.floor(Math.random()*8);
+
+			switch(randomNumber){
+				case 0: 
+					answer = "You Know it  will happen and very soon ";
+					break ;
+				case 1: 
+					answer = "Never in a million years";
+					break ;
+				case 2: 
+					answer = "all day every day ";
+					break ;
+				case 3: 
+					answer = "hashtag Hell No ";
+					break ;
+				case 4: 
+					answer = "in reverse";
+					break ;
+				case 5: 
+					answer = "its easier for Oto to finish a marathon";
+					break ;
+				case 6: 
+					answer = "ha ha ha  you  funny  hell no  just look at your slef ";
+					break ;
+				default:
+					answer: "I Dont Know about that ";
+
+			}
+			
+			output.innerHTML = "You Asked Me : " +question+ "<br>  I think that  <br>" + answer;
+
+
+		</script>
+	</body>
+
+</html>
+

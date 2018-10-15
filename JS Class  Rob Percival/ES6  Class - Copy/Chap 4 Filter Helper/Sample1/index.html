@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h3>Filter Helper</h3>
+    <div id="output">Original Array :</div>
+    <div id="output1">New Array :</div>
+
+    <script>
+        // To create an array from another array 
+
+        var output = document.getElementById('output');
+        var output1 = document.getElementById('output1');
+
+
+
+        var products = [{
+                name: 'cucumber',
+                type: 'vegetable'
+            },
+            {
+                name: 'banana',
+                type: 'fruit'
+            },
+            {
+                name: 'celery',
+                type: 'vegetable'
+            },
+            {
+                name: 'orange',
+                type: 'fruit'
+            }
+        ];
+
+       var myFilter = products.filter(function (product) {
+            return product.type == "fruit";
+        });
+
+        console.log(myFilter);
+    </script>
+
+</body>
+
+</html>

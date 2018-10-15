@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <h3>Reduce Helper</h3>
+  <div id="output">Original Array :</div>
+
+  <script>
+    // To create an array from another array 
+
+    var output = document.getElementById('output');
+    var output1 = document.getElementById('output1');
+
+    var numbers = [10, 20, 30];
+    var sum = 0;
+
+   var myTotal = numbers.reduce(function (sum, number) {
+      return sum + number;
+    }, 0);
+
+output.innerHTML = myTotal;
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+body{
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	padding-bottom:  50px;
+
+}
+h1{
+
+	font-size:2rem;
+	text-align: center;
+	color: #1f80c9;
+	margin-bottom: 60px;
+
+}
+.container{
+	background-color: darkred;
+	margin: 50px;
+	padding: 30px;
+	position: relative;
+	margin: 0 auto;
+	max-width: 500px;
+	border:  solid 7px silver;
+	box-sizing: border-box;
+		border-radius: 4%;
+}
+#result{
+	margin-top:  125px;
+	background-color: white;
+	color:darkred;
+	padding: 2px 7px;
+	position: relative;
+}
+#button1{
+	padding: 10px;
+	font-weight: bold;
+	background-color: black;
+	color: white;
+	font-size: 1.3rem;
+	border-radius: 10%;
+	
+	
+}
+
+#button1:hover{
+	background-color: white;
+	color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

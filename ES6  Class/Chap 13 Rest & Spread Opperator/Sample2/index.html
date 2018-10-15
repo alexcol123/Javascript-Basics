@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <h3>Reduce Helper</h3>
+  <div id="output">Original Array :</div>
+
+  <script>
+
+    // NOte 
+    // the spread operator  ... allows you to  include the variables without  having to specify the amount  and you can do in directly inside a new array or in a function argument.
+
+
+    const defaultColors = ['red', 'green'];
+    const userFavColors = ['orange', 'yellow'];
+    const fallColors = ['fire red', 'fall orange'];
+
+   let newColors = ['green', 'blue', ...defaultColors, ...userFavColors, ...fallColors];
+
+   console.log(newColors);
+
+  </script>
+
+</body>
+
+</html>

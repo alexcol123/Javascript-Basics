@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>setTimeout Random</title>
+<meta name="description" content="setTimeout Random. Version 1.0" />
+<meta name="author" content="The Gamer's Guide to Coding" />
+<meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+
+</head>
+
+<body>
+  <p>Open the browser console window to see the result.</p>
+
+  <script>
+
+    console.log ("Waiting for trigger...");
+    var myRandomNumber = getRandomInt(1000, 3000);
+    var myTimer = setTimeout(timerAction, myRandomNumber);
+
+    function timerAction () {
+      console.log ("Timer has triggered after %s ms", myRandomNumber);
+    }
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+  </script>
+
+</body>
+</html>

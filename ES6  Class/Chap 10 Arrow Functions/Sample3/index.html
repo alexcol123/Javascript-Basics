@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <h3>Arrow Functions</h3>
+  <div id="output">Original Array :</div>
+
+  <script>
+    const numbers = [1, 2, 3];
+
+    var newNumber1 = numbers.map(function (number) {
+      return 2 * number;
+    });
+    console.log(newNumber1);
+
+    // This can be compacted into this one line
+    var newNumber2 = numbers.map((number) => 2 * number);
+    console.log(newNumber2);
+  </script>
+
+</body>
+
+</html>
